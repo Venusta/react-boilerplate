@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -13,8 +14,8 @@ const PATH_DIST = path.join(__dirname, "./dist");
 // `webpack --env.production` sets env.production = true
 // `webpack --env.a = b` sets env.a = 'b'
 // https://webpack.js.org/configuration/configuration-types#exporting-a-function
-module.exports = env => {
-  const environment = env.environment;
+module.exports = (env) => {
+  const { environment } = env;
   const isProduction = environment === "production";
   const isDevelopment = environment === "development";
 
@@ -103,8 +104,8 @@ module.exports = env => {
                 "@babel/preset-react",
               ],
             },
-          }
-        }
+          },
+        },
       ],
     },
     plugins: [
