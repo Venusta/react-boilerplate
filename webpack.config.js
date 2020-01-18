@@ -82,7 +82,7 @@ module.exports = env => {
             options: {
               presets: [
                 ["@babel/preset-env", {
-                  debug: true, // Output the targets/plugins used when compiling
+                  debug: false, // Output the targets/plugins used when compiling
 
                   // Configure how @babel/preset-env handles polyfills from core-js.
                   // https://babeljs.io/docs/en/babel-preset-env
