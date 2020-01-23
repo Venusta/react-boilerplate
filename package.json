@@ -1,8 +1,7 @@
 {
     "scripts": {
-        "build": "webpack --env.environment=production --config webpack.config.js",
-        "dev": "webpack --env.environment=development --config webpack.config.js",
-        "devserver": "webpack-dev-server --env.environment=development --config webpack.config.js"
+        "start": "webpack-dev-server --mode development --hot --progress --colors --port 3000 --open",
+        "build": "webpack -p --progress --colors"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.3",
