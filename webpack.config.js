@@ -76,6 +76,7 @@ module.exports = {
   module: {
     rules: [
       {
+        // .js, .jsx
         test: /\.(jsx?)$/, // Apply this rule to files ending in .js
         exclude: /node_modules/, // Don't apply to files residing in node_modules
         use: { // Use the following loader and options
@@ -107,6 +108,11 @@ module.exports = {
             ],
           },
         },
+      },
+      // css
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
