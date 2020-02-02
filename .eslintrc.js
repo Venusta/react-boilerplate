@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends:  [
+  extends: [
     'plugin:react/recommended',  // Uses the recommended rules from @eslint-plugin-react
     'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from @typescript-eslint/eslint-plugin
     "airbnb",
@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: [
     "react",
+    "@typescript-eslint"
   ],
   settings: {
     react: {
@@ -38,5 +39,7 @@ module.exports = {
       "windows",
     ],
     "react/state-in-constructor": ["error", "never"],
+    "react/jsx-filename-extension": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
   },
 };

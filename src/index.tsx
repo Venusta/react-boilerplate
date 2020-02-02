@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 function Root() {
-  return <h1>Hello, world.</h1>;
+  return <h1>Hello, April.</h1>;
 }
 
 // Render the Root element into the DOM

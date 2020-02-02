@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 // webpack.config.js
 const webpack = require("webpack");
 const path = require("path");
@@ -66,7 +65,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
+    extensions: [".js", ".ts", ".tsx"],
     mainFields: ["browser", "module", "main"],
   },
 
@@ -76,7 +75,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         enforce: "pre",
         use: [
@@ -88,6 +87,16 @@ module.exports = {
             loader: require.resolve("eslint-loader"),
           },
         ],
+      },
+      {
+        test: /\.tsx?$/,
+        use: [
+          !isProduction && {
+            loader: 'babel-loader',
+            options: { plugins: ['react-hot-loader/babel'] }
+          },
+          'ts-loader'
+        ].filter(Boolean),
       },
       // css
       {
