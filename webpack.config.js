@@ -1,11 +1,9 @@
 /* eslint-disable no-unused-vars */
-// webpack.config.js
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-// We'll refer to our source and dist paths frequently, so let's store them here
 const PATH_SOURCE = path.join(__dirname, "./src");
 const PATH_DIST = path.join(__dirname, "./dist");
 const isProduction = process.argv.indexOf("-p") >= 0 || process.env.NODE_ENV === "production";
@@ -77,7 +75,7 @@ module.exports = {
     rules: [
       {
         // .js, .jsx
-        test: /\.(jsx?)$/, // Apply this rule to files ending in .js
+        test: /\.(jsx?)$/,
         exclude: /node_modules/, // Don't apply to files residing in node_modules
         use: { // Use the following loader and options
           loader: "babel-loader",
