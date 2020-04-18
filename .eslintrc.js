@@ -40,5 +40,6 @@ module.exports = {
     "react/state-in-constructor": ["error", "never"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    'no-param-reassign': ['error', { props: false }], // not sure
   },
 };
