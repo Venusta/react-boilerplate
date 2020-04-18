@@ -130,7 +130,7 @@ module.exports = {
     // bundles using <script> tags. The file will be placed in `output.path`.
     // https://github.com/jantimon/html-webpack-plugin
     new HtmlWebpackPlugin({
-      template: path.join(PATH_SOURCE, "./index.html"),
+      template: path.join(PATH_SOURCE, "./assets/index.html"),
     }),
   ],
 };
