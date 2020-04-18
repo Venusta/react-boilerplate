@@ -71,6 +71,7 @@ module.exports = {
   // Determine how the different types of modules will be treated.
   // https://webpack.js.org/configuration/module
   // https://webpack.js.org/concepts#loaders
+  devtool: "source-map",
   module: {
     rules: [
       {
